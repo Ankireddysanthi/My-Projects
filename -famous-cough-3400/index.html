@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+      .nav{
+        display: flex;
+       height: 60px;
+      }
+     .main{
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(235,235,235);
+        padding: 1%;
+      }
+     a{
+        padding-right: 1%;
+        font-family:FoundationSans-Roman, Helvetica,  Arial, sans-serif; 
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: none;
+      }
+     a:hover{
+        color:#4a4a4a;
+        text-decoration: underline;
+      }
+      .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(255,255,255);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1% 0 1% 0;
+       }
+
+     .home{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        height: 600px;
+        gap: 2%;
+        padding-left: 2%;
+        background-image: url(https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/hero/web-fcac-hero-june-2022-des.jpg);
+        background-repeat: no-repeat;
+     }
+     .home4>div div:hover{
+        border: 2px solid gray;
+      }
+     .home4 p{
+       color: red;
+     }
+      #megamenu{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+      }
+     #menu:hover #megamenu{
+        opacity: 1;
+        visibility: visible;
+      }  
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+      
+    </style>
+ </head>
+  <body>
+    <div class="nav">
+      <div style="background-color: black;width:60%;    padding-left: 2%;">
+             <h3 style="color: aliceblue;">CAR CARE IS EVEN MORE COMPLETE WITH THE MY FIRESTONE APP</h3>
+       </div >
+       <div style="display: flex;background-color:rgb(255, 0,0);width: 50%;padding-left: 2%; align-items:  center;justify-content: space-around;">
+           <div id="n1">
+                  <h3 style="color: aliceblue;">BROWES AND OFFERS AND COUPONS</h3>
+             </div>
+            <div>
+              <BUtton style="width:100%;margin-left: 3%;font-family: Roman, Helvetica, Arial, sans-serif;background-color: rgb(255,0,0);border-color:whitesmoke">GET THE APP</BUtton>
+            </div>
+       </div>
+    </div>
+    <div class="main">
+      <a href="#">Blog </a>
+      <a href="#">|   Schedule Appointment   </a>
+      <a href="#">|  Request a Quote   </a>
+      <a href="#">|  Contact Us   </a>
+      <a id="menu" href="./createaccout.html">|  Create an account </a>
+      <div id="megamenu" style="width: 30%;margin: auto; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;text-align: center;height: 600px;margin-top: 5%;padding-top: 3%;">
+        <h1>SIGN IN </h1>
+        <form id="form" style="width: 90%;margin: auto;" >
+          <input id="fname" style="margin-bottom: 5%;font-size: 30px;" type="text" placeholder="First Name">
+          <br>
+          <input id="lname" style="margin-bottom: 5%; font-size: 30px;" type="text" placeholder="Last Name">
+            <br>
+            <input id="email" style="margin-bottom: 5%;font-size: 30px;" type="Eamail" placeholder="Email">
+          <br>
+          <input id="phone" style="margin-bottom: 5%;font-size: 30px;" type="number" placeholder="Phone Number(optional)">
+          <br>
+            <input id="password" style="margin-bottom: 5%;font-size: 30px;" type="Password" placeholder="password">
+            <br>
+          <p>Passwords are case sensitive and require <span>a minimum of 8 charecters and three of the following four conditions:</span></p>
+        
+          <input  id="submit" style="font-size: 20px;margin-bottom: 5%;background-color: red;color: aliceblue;border: none;" type="submit" value="CREATE AN ACCOUNT" >
+          <p>Have an account?<a href="./sign.html">Sign In</a></p>
+        </form>
+      </div>
+      <a id="signsign" href="./sign.html"  >| Sign In   </a>
+      <img src="https://assets.firestonecompleteautocare.com/etc/designs/bsro/global/images/icon/firestone-shield-color.svg"alt="error">
+    </div>
+    <div class="nav2">
+      <img style="height:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHoRsWVfv74llEwBxn8Iebh3Glk2Zm6wvhSI3GbszbfDOeSRCVSFfVriTGhXauTATX4S8&usqp=CAU" alt="">
+      <a  style="border-right: 1px solid black;" href="./dropdown.html">TIRSE</a>
+      <a style="border-right: 1px solid black;" href="">AUTO REPAIR</a>
+      <a style="border-right: 1px solid black;"   href="">AUTO MANAGMENT</a>
+      <a style="border-right: 1px solid black;"  href="">COUPONS</a>
+      <a  href="">FIND A STORE</a>
+      <img src="./firestone2.jpg" alt="">
+      <div class="child1">
+        <a style="font-family: FoundationSans-Roman, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: 400;color: rgb(74, 74, 74);">Find your localstorege :</a>
+        <div>
+          <button style="width:60%;font-family: FoundationSans-Roman, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: 400;color:  rgb(74, 74, 74);">Zip code</button>
+          <button style="background-color:rgb(216,29,5);color: aliceblue;border: none;width: 30% ;font-family: Ultramagnetic, Helvetica, Arial, sans-serif;font-size: 19px;font-weight: 400;height: 40px;width: 30%;">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+          <div style="width: 25%;background-color: red;padding-top: 2%;padding-bottom: 2%;height: 400px; padding-left: 2%;">
+                <div style="display:flex;margin-bottom: 5%;gap: 3%;justify-content: space-around;">
+                  <a  style="font-family:Ultramagnetic, Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 400;line-height: 28.5714px;color:rgb(255, 255, 255);" href=""> SHOP TIRES</a>
+                  <a  style="font-family:Ultramagnetic, Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 400;line-height: 28.5714px;color:rgb(255, 255, 255);" href="">GET SERVICES</a>
+                </div>
+            
+                <div style="display: flex;width:90% ;margin: auto;">
+                  <button style="background-color: aliceblue;color: rgb(216,29,5);font-size:16px;padding-top: 4%;padding-bottom: 4%;">BY VEHICLE</button>
+                  <button style="background-color:rgb(216,29,5);color: aliceblue;font-size:16px;">BY TIRE SIZE</button>
+                </div>
+                <p style="color: aliceblue;">All fields are required</p>
+                <input style="margin-bottom: 2%;font-size: 20px;" type="number" placeholder="Year">
+           
+                <input style="margin-bottom: 2%;font-size: 20px;"  type="text" placeholder="Make">
+           
+                <input style="margin-bottom: 2%;font-size: 20px;"  type="text" placeholder="Model">
+            
+                <input style="margin-bottom: 2%;font-size: 20px;"  type="text" placeholder=" Submodel">
+           
+                <div style="display: grid;grid-template-columns: repeat(2,1fr);justify-content: space-evenly;">
+                  <input style="margin-bottom: 2%;font-size: 20px; "  type="number" placeholder="TPMS:NO">
+                  <a style="color: aliceblue;" href="">what's this?</a>
+                </div>
+           
+                <div style="display:flex; gap:5% ;">
+                 <input style="margin-bottom: 2%;font-size: 20px;"  type="number" placeholder="80122">
+                  <a style="color: aliceblue;" href="">why?</a>
+                </div>
+           
+                <button style="font-size: 20px;width: 70%;background-color: rgb(216,29,5);color: aliceblue;border: none;">GET TIRE PRICE</button>
+            </div>
+            <div style="width: 70%;padding-top: 5%;">
+              <h3 style="font-family: Ultramagnetic, Helvetica, Arial, sans-serif;color: rgb(255, 255, 255);font-size: 70px;font-weight: 400;padding: 0%;margin: 0%;" >WE ARE</h3>
+              <h3 style="font-family: Ultramagnetic, Helvetica, Arial, sans-serif;color: rgb(255, 255, 255);font-size: 70px;font-weight: 400;padding: 0%;margin: 0%;">COMPLETE CAR CARE PEOPLE</h3>
+           </div>
+    </div>
+    <div class="home3">
+           <h1 style="text-align: center;">WE KEEP YOUR CAR RUNNING NEWER LONGER</h1>
+           <div style="display: flex;width: 40%;margin: auto;justify-content: space-around;">
+              <a style="font-size: 18px;" href="./homepage1.html">View repair services ></a>
+              <a  style="font-size: 18px;" href="">View maintain services ></a>
+            </div>
+            <div style="display: grid;grid-template-columns: repeat(4,1fr);gap:2%;margin-top:3%;text-align: center;">
+                <div>
+                  <img src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/crew/oil-071118-314x210.jpg" alt="">
+                  <h1 style="font-size:27.32px ;">OIL CHANGES</h1>
+                  <p style="font-size: 16px;">We handle over 19,000 oil changes every day</p>
+                  <a href="">shedule Service ></a>
+                </div>
+                <div>
+                  <img src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/crew/tires-071118-314x210.jpg" alt="">
+                  <h1  style="font-size:27.32px ;">TIRE  INSTALLATION</h1>
+                  <p style="font-size: 16px;">Get the lowest prices online,with coupons included</p>
+                  <a href="">Get Tire Pricing ></a>
+                </div>
+               <div>
+                  <img src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/four-column/web-fcac-four-column-die-hard-homepage.jpg" alt="">
+                  <h1  style="font-size:27.32px ;">DIEHARD  BATTERIES</h1>
+                 <p style="font-size: 16px;">Our experts install more than 800,000 car batteries a year</p>
+                 <a href="">Get Battere Pricing ></a>
+                </div>
+                <div>
+                  <img src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/crew/alignment-071118-314x210.jpg" alt="">
+                  <h1  style="font-size:27.32px ;">WHEEL ALIGNMENT</h1>
+                  <p style="font-size: 16px;">We handle over 9,000 aligments every day</p>
+                  <a href="">Get Allgnment Pricing ></a>
+                </div>
+            </div>
+    </div>
+    <div class="home4" style="text-align: center;margin-top: 5%;">
+             <h1>AUTO CARE TIPS & ADVICE</h1>
+            <div style="display: grid;grid-template-columns: repeat(3,1fr);gap: 5%;text-align: center;" >
+                <div>
+                 <img style="width:100% ;height: 65%;" src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/blog/images/2022/12-dec/electric-car-charging-winter.jpg" alt="">
+                  <p>DRIVING</p>
+                  <h4 style="font-size: 22px;">Why Do Eletric Cars Have Less Range In Winter?</h4>
+               </div>
+                <div>
+                 <img style="width: 100%;" src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/blog/images/2022/11-nov/winter-driving-at-night.jpg" alt="">
+                 <p>DRIVING</p>
+                 <h4 style="font-size: 22px;">Late Night Holiday Road Trip?:5 Tips For Driving Through The Night</h4>
+                </div>
+               <div>
+                  <img style="width: 100%;" src="https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/blog/images/2022/10-oct/used-tires-on-a-boat.jpg" alt="">
+                  <p>DRIVING</p>
+                  <h4 style="font-size: 22px;">5 Tips For Becoming A Greener Driver And How Tires4Ward Can Help</h4>
+               </div>
+            </div>
+           <button style="font-size: 19PX;font-family:Ultramagnetic, Helvetica, Arial, sans-serif ;color: rgb(255, 255, 255);font-weight: 400;line-height: 20.9px;background-color: red;border: none;margin-top: 5%;padding: 2%;">VIEW MORE ARTICLES</button>
+    </div>
+    <!-- <div class="footer">
+      <div>
+        <h1>TIRES</h1>
+        <a href="">Alenza</a>
+        <a href="">Blizzak</a>
+        <a href=""> Firestone All Season</a>
+        <a href="">Destination</a>
+        <a href="">WeatherPeak</a>
+        <a href="">DriveGuard</a>
+        <a href=""> Winterforce</a>
+        <a href="">WeatherGrip</a>
+        <a href="">Ecopia</a>
+        <a href="">   Turanza</a>
+        <a href="">      Potenza</a></a>
+        <a href="">      Dueler</a>
+        <a href="">        Run-Flat</a>
+        <a href="">Firehawk</a>
+        <a href="">SureDrive</a>
+        <a href="">        Toyo</a>
+        <h1>ABOUT TIRES</h1>
+        <a href="">Firestone Racing</a>
+        <a href=""> Tire Recall Information</a>
+        <a href=""> Tire Warranties</a>
+        <a href=""> Tire Tread Depth</a>
+        <a href=""> Shop Tires</a>
+        <a href="">The Tire Advisor</a>
+        <a href=""></a>Tires for SUVs & CUVs</a>
+        <a href=""></a>Winter Tires</a>
+      </div>
+     
+    </div> -->
+
+  </body>
+  <script>
+    let sign=document.getElementById("signsign");
+    let s=JSON.parse(localStorage.getItem("formdata"))||[]
+    console.log(s)
+     for(let i=0;i<s.length;i++){
+      (s[i].fname===s.fnmae)
+      sign.textContent="HI"+" "+s[i].fname
+    
+     }
+  </script>
+    
+</html>

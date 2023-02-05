@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:2%;
+            align-items: center;
+            text-align: center;
+        }
+        .chaild1{
+             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+             padding-bottom: 5%;
+        }
+        .chaild1>h1{
+            color: maroon;
+        }
+        .chaild1>button{
+          background-color: red;
+          color: aliceblue;
+          text-decoration: none;
+          border: none;
+          padding: 5%;
+          font-size: 16px;
+        }
+        .nav{
+        display: flex;
+       height: 60px;
+      }
+     .main1{
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(235,235,235);
+        padding: 1%;
+      }
+     a{
+        padding-right: 1%;
+        font-family:FoundationSans-Roman, Helvetica,  Arial, sans-serif; 
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: none;
+      }
+     a:hover{
+        color:#4a4a4a;
+        text-decoration: underline;
+      }
+      #f{
+        width: 50%;
+        margin: auto;
+        
+        text-align: center;
+        padding: 2%;
+      }
+       
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+        <div style="background-color: black;width:60%;    padding-left: 2%;">
+         <h3 style="color: aliceblue;">CAR CARE IS EVEN MORE COMPLETE WITH THE MY FIRESTONE APP</h3>
+        </div >
+        <div style="display: flex;background-color:rgb(255, 0,0);width: 50%;padding-left: 2%; align-items:  center;justify-content: space-around;">
+            <div id="n1">
+              <h3 style="color: aliceblue;">BROWES AND OFFERS AND COUPONS</h3>
+            </div>
+           <div>
+             <BUtton style="width:100%;margin-left: 3%;font-family: Roman, Helvetica, Arial, sans-serif;background-color: rgb(255,0,0);border-color:whitesmoke">GET THE APP</BUtton>
+            </div>
+         </div>
+    </div>
+    <div class="main1">
+      <a href="./cart.html">card</a>
+        <a href="#">Blog </a>
+        <a href="#">|   Schedule Appointment   </a>
+        <a href="#">|  Request a Quote   </a>
+        <a href="#">|  Contact Us   </a>
+        <a  href="./createaccout.html">|  Create an account </a>
+       
+      <a id="signsign" href="./sign.html"  >| Sign In   </a>
+      <img src="https://assets.firestonecompleteautocare.com/etc/designs/bsro/global/images/icon/firestone-shield-color.svg"alt="error">
+    </div>
+   <div id="f">
+    <select id="filter" style="padding: 2%;font-size: 20px;border: none; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px ">
+      <option value="">TIRE BRAND</option>
+      <option value="FIRESTONE">FIRESTONE</option>
+      <option value="SUREDRIVE">SUREDRIVE</option>
+      <option value="TOYO TIRES">TOYO TIRES</option>
+
+      <option value="PRIMEWELL">PRIMEWELL</option>
+      <option value="BRIDGESTONE">BRIDGESTONE</option>
+    </select>
+   </div>
+   <div id="main">
+    
+
+   </div>
+  </body>
+
+
+  <script>
+      let arr=[]  
+    async function tire(){
+      try{
+        let res=await fetch("./tire.json");
+        res=await res.json()
+        console.log(res)
+        arr=res
+        tiredata(res)
+
+      }   
+      catch(err){
+       console.log(err)
+      }
+    }
+    tire();
+
+    let filtersearch=document.getElementById("filter");
+    filtersearch.addEventListener("change",(e)=>{
+      e.preventDefault();
+      let filtervalue=filtersearch.value;
+      if(filtervalue===""){
+        tiredata(arr)
+      }else{
+        let filtered=arr.filter((element)=>{
+        if(element.brand===filtervalue){
+          return true;
+        }else{
+          return false;
+        }
+      })
+      tiredata(filtered);
+      }
+     
+    })
+    let main=document.getElementById("main");
+    let visit=JSON.parse(localStorage.getItem("visite"))||[];
+    function tiredata(data){
+      main.innerText="";
+      data.forEach((element,index)=>{
+     
+        let chaild1=document.createElement("div");
+        chaild1.setAttribute("class","chaild1")
+        let img=document.createElement("img");
+        img.src=element.img;
+        let brand=document.createElement("h1")
+        brand.textContent=element.brand;
+        let tirename=document.createElement("h4");
+        tirename.textContent=element.tirename;
+        let stability=document.createElement("h4");
+        stability.textContent=element.stability
+        let traction=document.createElement("h4")
+        traction.textContent=element.traction;
+        let noice=document.createElement("h4")
+        noice.textContent=element.noice;
+        let addtocart=document.createElement("button");
+        addtocart.innerText="ADD TO CART";
+         addtocart.addEventListener("click",()=>{
+          visit.push(element);
+          localStorage.setItem("visite",JSON.stringify(visit))
+         })
+        chaild1.append(img,brand,tirename,stability,traction,noice,addtocart)
+        main.append(chaild1) 
+        
+      });
+
+    }
+
+
+
+
+
+
+
+
+
+  </script>
+</html>

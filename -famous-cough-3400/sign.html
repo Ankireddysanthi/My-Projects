@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .nav{
+        display: flex;
+       height: 60px;
+      }
+     .main{
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(235,235,235);
+        padding: 1%;
+      }
+     a{
+        padding-right: 1%;
+        font-family:FoundationSans-Roman, Helvetica,  Arial, sans-serif; 
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: none;
+      }
+     a:hover{
+        color:#4a4a4a;
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div style="background-color: black;width:60%;    padding-left: 2%;">
+         <h3 style="color: aliceblue;">CAR CARE IS EVEN MORE COMPLETE WITH THE MY FIRESTONE APP</h3>
+        </div >
+        <div style="display: flex;background-color:rgb(255, 0,0);width: 50%;padding-left: 2%; align-items:  center;justify-content: space-around;">
+            <div id="n1">
+              <h3 style="color: aliceblue;">BROWES AND OFFERS AND COUPONS</h3>
+            </div>
+           <div>
+             <BUtton style="width:100%;margin-left: 3%;font-family: Roman, Helvetica, Arial, sans-serif;background-color: rgb(255,0,0);border-color:whitesmoke">GET THE APP</BUtton>
+            </div>
+         </div>
+    </div>
+    <div class="main">
+        <a href="#">Blog </a>
+        <a href="#">|   Schedule Appointment   </a>
+        <a href="#">|  Request a Quote   </a>
+        <a href="#">|  Contact Us   </a>
+        <a  href="./createaccout.html">|  Create an account </a>
+       
+      <a id="signsign" href="./sign.html" >| Sign In   </a>
+      <img src="https://assets.firestonecompleteautocare.com/etc/designs/bsro/global/images/icon/firestone-shield-color.svg"alt="error">
+    </div>
+    <!-- <h1 id="output">log in successful</h1> -->
+    <div style="width: 30%;margin: auto; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;text-align: center;height: 400px;margin-top: 5%;padding-top: 3%;">
+        <h1>SIGN IN </h1>
+        <form style="width: 90%;margin: auto;" >
+            <input id="email" style="margin-bottom: 5%;font-size: 30px;" type="Eamail" placeholder="Email">
+            <br>
+            <input id="password" style="margin-bottom: 5%;font-size: 30px;" type="Password" placeholder="password">
+            <br>
+            <input  id="submit" style="font-size: 20px;margin-bottom: 5%;background-color: red;color: aliceblue;border: none;" type="submit" value="SIGNIN" >
+            <h4>Forgot Your Password</h4>
+            <p>Don't have an account?<a href="./createaccout.html">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+<script>
+    let output=document.getElementById("output")
+    let s=JSON.parse(localStorage.getItem("formdata"))||[]
+    console.log(s);
+    let form=document.querySelector("form")
+    let email=document.getElementById("email")
+    let password=document.getElementById("password");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let s1={
+            email:email.value,
+            password:password.value
+        }
+
+        for(let i=0;i<s.length;i++){
+            if(s[i].email===s1.email && s[i].password===s1.password){
+            window.location.href="./index.html"
+            }
+        }
+    })
+
+</script>
+</html>

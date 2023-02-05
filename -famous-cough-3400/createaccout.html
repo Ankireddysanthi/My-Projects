@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .nav{
+        display: flex;
+       height: 60px;
+      }
+     .main{
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(235,235,235);
+        padding: 1%;
+      }
+     a{
+        padding-right: 1%;
+        font-family:FoundationSans-Roman, Helvetica,  Arial, sans-serif; 
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: none;
+      }
+     a:hover{
+        color:#4a4a4a;
+        text-decoration: underline;
+      }
+       
+    </style>
+</head>
+   <body>
+    <div class="nav">
+        <div style="background-color: black;width:60%;    padding-left: 2%;">
+         <h3 style="color: aliceblue;">CAR CARE IS EVEN MORE COMPLETE WITH THE MY FIRESTONE APP</h3>
+        </div >
+        <div style="display: flex;background-color:rgb(255, 0,0);width: 50%;padding-left: 2%; align-items:  center;justify-content: space-around;">
+            <div id="n1">
+              <h3 style="color: aliceblue;">BROWES AND OFFERS AND COUPONS</h3>
+            </div>
+           <div>
+             <BUtton style="width:100%;margin-left: 3%;font-family: Roman, Helvetica, Arial, sans-serif;background-color: rgb(255,0,0);border-color:whitesmoke">GET THE APP</BUtton>
+            </div>
+         </div>
+    </div>
+    <div class="main">
+        <a href="#">Blog </a>
+        <a href="#">|   Schedule Appointment   </a>
+        <a href="#">|  Request a Quote   </a>
+        <a href="#">|  Contact Us   </a>
+        <a  href="./createaccout.html">|  Create an account </a>
+       
+      <a id="signsign" href="./sign.html" >| Sign In   </a>
+      <img src="https://assets.firestonecompleteautocare.com/etc/designs/bsro/global/images/icon/firestone-shield-color.svg"alt="error">
+    </div>
+     <div style="width: 30%;margin: auto; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;text-align: center;height: 600px;margin-top: 5%;padding-top: 3%;">
+            <h1>SIGN IN </h1>
+            <form id="form" style="width: 90%;margin: auto;" >
+                <input id="fname" style="margin-bottom: 5%;font-size: 30px;" type="text" placeholder="First Name">
+                <br>
+                <input id="lname" style="margin-bottom: 5%;font-size: 30px;" type="text" placeholder="Last Name">
+                <br>
+                <input id="email" style="margin-bottom: 5%;font-size: 30px;" type="Eamail" placeholder="Email">
+                <br>
+                <input id="phone" style="margin-bottom: 5%;font-size: 30px;" type="number" placeholder="Phone Number(optional)">
+                <br>
+                <input id="password" style="margin-bottom: 5%;font-size: 30px;" type="Password" placeholder="password">
+                <br>
+                <p>Passwords are case sensitive and require <span>a minimum of 8 charecters and three of the following four conditions:</span></p>
+                
+                <input  id="submit" style="font-size: 20px;margin-bottom: 5%;background-color: red;color: aliceblue;border: none;" type="submit" value="CREATE AN ACCOUNT" >
+                <p>Have an account?<a href="./sign.html">Sign In</a></p>
+            </form>
+        </div>
+   </body>
+
+   <script>
+      let form=document.getElementById("form")
+      let fname=document.getElementById("fname")
+      let lname=document.getElementById("lname")
+      let email=document.getElementById("email")
+      let phone=document.getElementById("phone")
+      let password=document.getElementById("password")
+      let submit=document.getElementById("submit");
+      let data=JSON.parse(localStorage.getItem("formdata"))||[]
+        form.addEventListener("submit",(e)=>{
+          e.preventDefault();
+           let formdata={
+            fname:fname.value,
+            lname:lname.value,
+            email:email.value,
+            phone:phone.value,
+            password:password.value,
+        }
+        data.push(formdata)
+        localStorage.setItem("formdata",JSON.stringify(data))
+        window.location.href="./sign.html"
+       })
+    </script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 40%;
+            /* margin: auto; */
+            margin-left: 10%;
+            /* border: 2px solid red; */
+            height: 300px;
+            margin-top:6%;
+            padding-left: 2%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .parent{
+            display: flex;
+            gap:2%;
+            /* padding-left: 10%; */
+            margin-top: 10%;
+            height: 300px;
+        }
+        .parent>div{
+            display: grid;
+            gap: 3%;
+        }
+        .parent>div>a{
+            
+            font-family: FoundationSans-Roman, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 16.2px;
+            
+           
+        }
+        a:hover{
+            color:rgb(216,29,5); ;
+        }
+        .nav{
+        display: flex;
+       height: 60px;
+      }
+     .main{
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(235,235,235);
+        padding: 1%;
+      }
+     .a{
+        padding-right: 1%;
+        font-family:FoundationSans-Roman, Helvetica,  Arial, sans-serif; 
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: none;
+      }
+     .a:hover{
+        color:#4a4a4a;
+        text-decoration: underline;
+      }
+      .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(255,255,255);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1% 0 1% 0;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div style="background-color: black;width:60%;    padding-left: 2%;">
+               <h3 style="color: aliceblue;">CAR CARE IS EVEN MORE COMPLETE WITH THE MY FIRESTONE APP</h3>
+         </div >
+         <div style="display: flex;background-color:rgb(255, 0,0);width: 50%;padding-left: 2%; align-items:  center;justify-content: space-around;">
+             <div id="n1">
+                    <h3 style="color: aliceblue;">BROWES AND OFFERS AND COUPONS</h3>
+               </div>
+              <div>
+                <BUtton style="width:100%;margin-left: 3%;font-family: Roman, Helvetica, Arial, sans-serif;background-color: rgb(255,0,0);border-color:whitesmoke">GET THE APP</BUtton>
+              </div>
+         </div>
+      </div>
+      <div class="main">
+        <a class="a" href="#">Blog </a>
+        <a  class="a"href="#">|   Schedule Appointment   </a>
+        <a  class="a"href="#">|  Request a Quote   </a>
+        <a class="a"href="#">|  Contact Us   </a>
+        <a class="a"id="menu" href="./createaccout.html">|  Create an account </a>
+       
+        <a class="a" id="signsign" href="./sign.html"  >| Sign In   </a>
+        <img src="https://assets.firestonecompleteautocare.com/etc/designs/bsro/global/images/icon/firestone-shield-color.svg"alt="error">
+      </div>
+      <div class="nav2">
+        <img style="height:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHoRsWVfv74llEwBxn8Iebh3Glk2Zm6wvhSI3GbszbfDOeSRCVSFfVriTGhXauTATX4S8&usqp=CAU" alt="">
+        <a  style="border-right: 1px solid black;" href="./dropdown.html">TIRSE</a>
+        <a style="border-right: 1px solid black;" href="">AUTO REPAIR</a>
+        <a style="border-right: 1px solid black;"   href="">AUTO MANAGMENT</a>
+        <a style="border-right: 1px solid black;"  href="">COUPONS</a>
+        <a  href="">FIND A STORE</a>
+        <img src="./firestone2.jpg" alt="">
+        <div class="child1">
+          <a style="font-family: FoundationSans-Roman, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: 400;color: rgb(74, 74, 74);">Find your localstorege :</a>
+          <div>
+            <button style="width:60%;font-family: FoundationSans-Roman, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: 400;color:  rgb(74, 74, 74);">Zip code</button>
+            <button style="background-color:rgb(216,29,5);color: aliceblue;border: none;width: 30% ;font-family: Ultramagnetic, Helvetica, Arial, sans-serif;font-size: 19px;font-weight: 400;height: 40px;width: 30%;">Go</button>
+          </div>
+        </div>
+      </div>
+    <div id="main">
+        <div class="parent">
+            <div style="width: 30%;">
+                <img style="width:70%;" src="https://images.pepboys.com/fit-in/700x700/images/productImages/86504000/DriveGuard_2.jpg" alt="">
+            </div>
+            <div >
+                <a href=""><h1>SHOP FOR TIRES</h1>
+                <a href="">Shop Tires by Vehicle</a>
+                <a href="">Shop Tires by Size</a>
+                <a href="">Shop with Tire Decision Guide</a>
+                <a href="./tire.html">Shop Tires</a>
+                <a href=""> Tire Warranties</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
